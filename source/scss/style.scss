@@ -1,0 +1,112 @@
+@import "_variables";
+
+html {
+  background-color: $color-secondary;
+}
+
+body {
+  background-color: white;
+  color: $color-dark;
+  font-family: $fonts-sans-serif;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 3rem;
+}
+
+/* Text */
+a, body, button, td, input, p, textarea {
+  font-size: $font-size-base;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fonts-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3 * $font-size-base;
+  background-color: $color-secondary;
+}
+
+h2 {
+  font-size: 2.5 * $font-size-base;
+}
+
+h3 {
+  font-size: 2 * $font-size-base;
+}
+
+h4 {
+  font-size: 1.5 * $font-size-base;
+}
+
+h5, h6 {
+  font-size: $font-size-base;
+}
+
+a {
+  color: $color-links;
+  font-weight: bold;
+
+  &:hover {
+    color: darken($color-links, 20%);
+  }
+}
+
+/* Form fields */
+input,
+textarea {
+  border: 1px solid darken($color-primary, 10%);
+  border-radius: $border-radius;
+  padding: $padding-sm;
+
+  &[type="button"] {
+    background-color: $color-primary;
+    color: $color-dark;
+    font-weight: bold;
+    font-size: 1.5 * $font-size-base;
+
+    &.danger {
+      background-color: $color-dark;
+      border-color: darken($color-dark, 10%);
+      color: $color-neutral-light;
+    }
+  }
+}
+
+/* Tables */
+table {
+  border: 2px solid $color-secondary;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: $border-radius;
+
+  td,
+  th {
+    padding: $padding-sm;
+  }
+
+  thead {
+    background-color: $color-neutral;
+  }
+
+  tr {
+    &:nth-child(even) {
+      background-color: $color-neutral-light;
+    }
+  }
+}
+
+/* Images */
+figure {
+  background-color: $color-secondary;
+  border-radius: $border-radius;
+  display: table;
+  padding: 2 * $padding-sm;
+  
+  figcaption {
+    color: $color-neutral-light;
+    padding-top: $padding-sm;
+  }
+}
